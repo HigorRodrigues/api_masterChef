@@ -1,7 +1,7 @@
 
-export class Result{
+export class Result<T>{
     quantidade?: number;
     page?: number;
     total?: number;
-    data?: any;
+    data?: Array<T>;
 }

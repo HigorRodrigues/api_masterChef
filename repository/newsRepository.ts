@@ -1,4 +1,16 @@
 import mongoose from "mongoose";
-import { NewsSchema } from "../models/newsSchema";
+import { News } from "../models/news";
 
-export const NewsRepository = mongoose.model("news", NewsSchema);
+const newsSchema = new mongoose.Schema<News>({
+    titulo: {String},
+    chapeu: {String},
+    texto: {String},
+    autor: {String},
+    imagem: {String},
+    dataPublicacao: {type: Date},
+    tags: {String},
+    link: {String},
+    ativo: {Boolean}
+})
+
+export const NewsRepository = mongoose.model<News>("news", newsSchema);

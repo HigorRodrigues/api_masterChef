@@ -3,17 +3,17 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.NewsRepository = void 0;
+exports.VideosRepository = void 0;
 const mongoose_1 = __importDefault(require("mongoose"));
-const newsSchema = new mongoose_1.default.Schema({
+const VideosSchema = new mongoose_1.default.Schema({
     titulo: { String },
-    chapeu: { String },
     texto: { String },
-    autor: { String },
     imagem: { String },
-    dataPublicacao: { type: Date },
-    tags: { String },
+    duracao: { String },
     link: { String },
+    url: { String },
+    dataPublicacao: { String },
+    tags: { String },
     ativo: { Boolean }
 });
-exports.NewsRepository = mongoose_1.default.model("news", newsSchema);
+exports.VideosRepository = mongoose_1.default.model("videos", VideosSchema);
