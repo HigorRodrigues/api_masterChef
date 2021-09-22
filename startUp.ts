@@ -9,6 +9,7 @@ import { VideosController } from "./controller/videosController";
 import newsRouter from "./router/newsRouter";
 import videosRouter from "./router/videosRouter";
 import galeriaRouter from "./router/galeriaRouter";
+import podcastRouter from "./router/podcastRouter";
 class StartUp {
 
     public app: Application;
@@ -28,6 +29,7 @@ class StartUp {
         this.app.use("/", newsRouter);
         this.app.use("/", videosRouter);
         this.app.use("/", galeriaRouter);
+        this.app.use("/", podcastRouter);
     }
 }
 

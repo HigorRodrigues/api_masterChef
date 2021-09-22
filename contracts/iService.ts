@@ -1,8 +1,22 @@
 import { Result } from "../infra/result";
 
+/**
+ * Interface genérica para retorno de pesquisas
+ */
 export interface iService<T> {
 
+    /**
+     * @summary busca por id
+     * @param id {String}
+     * @returns retorna o resultado de uma busca pelo seu id
+     */
     get(id: string): Promise<T>;
 
+    /**
+     * @summary Realiza uma busca paginada de uma model
+     * @param page {number} pagina
+     * @param quantidade {number} quantidade de itens
+     * @returns retorna uma lista de T onde T é uma model
+     */
     getAll(page: number, quantidade: number): Promise<Result<T>>;
 }

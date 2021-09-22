@@ -2,6 +2,11 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.News = void 0;
 const core_1 = require("./core");
+/**
+ * Model de news
+ * @type chapeu {String} titulo menor
+ * @type autor {String} quem escrever a notícia
+ */
 class News extends core_1.core {
 }
 exports.News = News;
